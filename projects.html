@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | John Moses Bahago</title>
+  <meta name="description" content="Explore projects built by John Moses Bahago — spanning data analysis, supply chain dashboards, and web development." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon" aria-hidden="true">JMB</span>
+        <span>John M. Bahago</span>
+      </a>
+      <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="about.html"   class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="planner.html"  class="nav-link">Planner</a>
+        <a href="contact.html"  class="nav-link nav-cta">Contact Me</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:.7rem;" aria-hidden="true"></i>
+        <span>Projects</span>
+      </nav>
+      <h1 class="page-title">Projects</h1>
+      <p class="page-subtitle">Things I've built, analysed, and shipped — at the intersection of engineering and data.</p>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <section class="section" aria-labelledby="projects-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label"><i class="fa-solid fa-folder-open"></i> My Work</span>
+          <h2 class="section-heading" id="projects-heading">What I've Been Working On</h2>
+          <p class="section-sub">
+            These represent a blend of my engineering background and my current data science journey.
+            Some were built for learning, others out of necessity — but all of them taught me something.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal" aria-labelledby="proj1-title">
+            <div class="project-img">
+              <img src="assets/project_reservoir.png"
+                   alt="Screenshot of the NigerDelta Formation Evaluator dashboard showing reservoir analysis charts"
+                   loading="lazy" />
+              <div class="project-img-overlay" aria-hidden="true">
+                <a href="#" class="btn btn-sm" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;backdrop-filter:blur(6px);">
+                  <i class="fa-solid fa-eye"></i> Preview
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="badge">Python</span>
+                <span class="badge badge-accent">Pandas</span>
+                <span class="badge badge-success">Data Analysis</span>
+              </div>
+              <h3 class="project-title" id="proj1-title">NigerDelta Formation Evaluator</h3>
+              <p class="project-desc">
+                A Python-based data analysis script that ingests raw well log CSV exports
+                from Niger Delta wells and produces automated reservoir quality reports.
+                Computes porosity, permeability indicators, and water saturation estimates
+                using the Archie equation — then outputs colour-coded summaries and basic
+                visualisations for quick field review.
+              </p>
+              <div class="project-meta">
+                <span class="project-year"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2023</span>
+                <div class="project-links" aria-label="Project links">
+                  <a href="#" title="View on GitHub" aria-label="View source code on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="#" title="Live Demo" aria-label="View live demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal reveal-delay-1" aria-labelledby="proj2-title">
+            <div class="project-img">
+              <img src="assets/project_supplychain.png"
+                   alt="Screenshot of the logistics supply chain KPI dashboard showing routes and metrics"
+                   loading="lazy" />
+              <div class="project-img-overlay" aria-hidden="true">
+                <a href="#" class="btn btn-sm" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;backdrop-filter:blur(6px);">
+                  <i class="fa-solid fa-eye"></i> Preview
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="badge">Microsoft Excel</span>
+                <span class="badge badge-accent">VBA</span>
+                <span class="badge badge-success">Operations</span>
+              </div>
+              <h3 class="project-title" id="proj2-title">Logistics KPI Tracker</h3>
+              <p class="project-desc">
+                An Excel workbook with VBA-powered automation built to track and visualise
+                supply chain KPIs across multiple vendor and delivery locations. Consolidates
+                purchase order data, auto-calculates on-time delivery rates, flags cost
+                overruns, and generates a management summary report at the click of a button.
+                Used operationally for several months to streamline reporting workflows.
+              </p>
+              <div class="project-meta">
+                <span class="project-year"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2022</span>
+                <div class="project-links" aria-label="Project links">
+                  <a href="#" title="View on GitHub" aria-label="View source code on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="#" title="Live Demo" aria-label="View live demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal reveal-delay-2" aria-labelledby="proj3-title">
+            <div class="project-img">
+              <img src="assets/project_academic.png"
+                   alt="Screenshot of the academic performance tracker web app showing GPA charts and course progress"
+                   loading="lazy" />
+              <div class="project-img-overlay" aria-hidden="true">
+                <a href="#" class="btn btn-sm" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;backdrop-filter:blur(6px);">
+                  <i class="fa-solid fa-eye"></i> Preview
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="badge">HTML</span>
+                <span class="badge badge-accent">CSS</span>
+                <span class="badge badge-success">JavaScript</span>
+              </div>
+              <h3 class="project-title" id="proj3-title">Student Academic Dashboard</h3>
+              <p class="project-desc">
+                A browser-based academic performance tracker built as part of my COS 106
+                coursework and personal experimentation with web development. Stores course
+                scores in localStorage, computes a running GPA, draws progress bars per
+                subject, and generates a downloadable study schedule. My first "real" web
+                project — built from scratch with vanilla JS, no libraries.
+              </p>
+              <div class="project-meta">
+                <span class="project-year"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2025</span>
+                <div class="project-links" aria-label="Project links">
+                  <a href="#" title="View on GitHub" aria-label="View source code on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="#" title="Live Demo" aria-label="View live demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- end projects-grid -->
+
+        <!-- What I'm learning next -->
+        <div class="reveal" style="margin-top:4rem;">
+          <div style="background:linear-gradient(135deg,var(--primary-xlight),var(--accent-light));border:1px solid var(--primary-light);border-radius:var(--radius-lg);padding:2.5rem;display:flex;gap:2rem;align-items:center;flex-wrap:wrap;">
+            <div style="font-size:3rem;flex-shrink:0;" aria-hidden="true">🔭</div>
+            <div>
+              <h3 style="margin-bottom:.5rem;">Currently Exploring</h3>
+              <p style="margin-bottom:1rem;">
+                I'm currently working through Python for Data Science (NumPy, Pandas, Matplotlib)
+                and getting my first taste of SQL. Next up: a small project that brings both together
+                to analyse public energy production data for Nigerian states.
+              </p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
+                <span class="badge">NumPy</span>
+                <span class="badge badge-accent">Pandas</span>
+                <span class="badge badge-success">SQL</span>
+                <span class="badge">Matplotlib</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-icon">JMB</span>
+            <span>John M. Bahago</span>
+          </a>
+          <p>Data Science student at MIVA Open University.</p>
+          <div class="footer-social">
+            <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" title="GitHub"   aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" title="Twitter"  aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <nav class="footer-links">
+            <a href="index.html"    class="footer-link">Home</a>
+            <a href="about.html"   class="footer-link">About Me</a>
+            <a href="projects.html" class="footer-link">Projects</a>
+            <a href="planner.html"  class="footer-link">Academic Planner</a>
+            <a href="contact.html"  class="footer-link">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Info</h4>
+          <ul style="display:flex;flex-direction:column;gap:.5rem;">
+            <li style="font-size:.875rem;color:rgba(255,255,255,.5);display:flex;gap:.5rem;align-items:center;">
+              <i class="fa-solid fa-graduation-cap" style="color:var(--primary);width:16px;"></i> MIVA Open University
+            </li>
+            <li style="font-size:.875rem;color:rgba(255,255,255,.5);display:flex;gap:.5rem;align-items:center;">
+              <i class="fa-solid fa-book" style="color:var(--primary);width:16px;"></i> BSc Data Science · 100L
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 John Moses Bahago · COS 106 Term Project · MIVA Open University</p>
+        <p>Built with <i class="fa-solid fa-heart" style="color:#EF4444;"></i> using HTML, CSS &amp; JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

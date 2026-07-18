@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner | John Moses Bahago</title>
+  <meta name="description" content="Interactive academic task planner for John Moses Bahago — add, track, and manage coursework and study goals." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon" aria-hidden="true">JMB</span>
+        <span>John M. Bahago</span>
+      </a>
+      <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="about.html"   class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="planner.html"  class="nav-link">Planner</a>
+        <a href="contact.html"  class="nav-link nav-cta">Contact Me</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:.7rem;" aria-hidden="true"></i>
+        <span>Academic Planner</span>
+      </nav>
+      <h1 class="page-title">Academic Planner</h1>
+      <p class="page-subtitle">Keep your coursework organised. Add tasks, set priorities, and track what's done.</p>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <section class="section" aria-labelledby="planner-heading">
+      <div class="container">
+        <h2 class="sr-only" id="planner-heading">Task Manager</h2>
+        <!-- Screen reader only heading -->
+        <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}</style>
+
+        <div class="planner-layout">
+
+          <!-- Sidebar -->
+          <aside aria-label="Planner statistics and add task">
+
+            <!-- Stats -->
+            <div class="planner-stats-grid" role="region" aria-label="Task statistics">
+              <div class="planner-stat">
+                <span class="planner-stat-num" id="statTotal" aria-live="polite">0</span>
+                <div class="planner-stat-label">Total Tasks</div>
+              </div>
+              <div class="planner-stat">
+                <span class="planner-stat-num" id="statPending" aria-live="polite">0</span>
+                <div class="planner-stat-label">Pending</div>
+              </div>
+              <div class="planner-stat success">
+                <span class="planner-stat-num" id="statDone" aria-live="polite">0</span>
+                <div class="planner-stat-label">Completed</div>
+              </div>
+              <div class="planner-stat danger">
+                <span class="planner-stat-num" id="statOverdue" aria-live="polite">0</span>
+                <div class="planner-stat-label">Overdue</div>
+              </div>
+            </div>
+
+            <!-- Add Task Form -->
+            <form class="add-task-form" id="taskForm" aria-label="Add new task" novalidate>
+              <h3><i class="fa-solid fa-circle-plus" aria-hidden="true"></i> Add a Task</h3>
+
+              <div class="form-group">
+                <label class="form-label" for="taskTitle">Task Title <span style="color:var(--danger);">*</span></label>
+                <input
+                  type="text"
+                  id="taskTitle"
+                  class="form-input"
+                  placeholder="e.g. Complete HTML assignment"
+                  maxlength="120"
+                  required
+                  aria-required="true"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="taskCourse">Course / Subject</label>
+                <select id="taskCourse" class="form-select">
+                  <option value="">Select a course…</option>
+                  <optgroup label="Current Courses">
+                    <option value="COS 106">COS 106 – Web Technologies</option>
+                    <option value="CSC 102">CSC 102 – Intro to Programming</option>
+                    <option value="MAT 101">MAT 101 – Mathematics I</option>
+                    <option value="GES 101">GES 101 – General Studies</option>
+                    <option value="STA 101">STA 101 – Statistics I</option>
+                  </optgroup>
+                  <option value="General">General / Personal</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="taskDue">Due Date</label>
+                <input
+                  type="date"
+                  id="taskDue"
+                  class="form-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Priority</label>
+                <div class="priority-group" role="group" aria-label="Task priority">
+                  <button type="button" class="priority-btn" data-priority="low" id="priorityLow" aria-pressed="false">
+                    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Low
+                  </button>
+                  <button type="button" class="priority-btn active" data-priority="medium" id="priorityMedium" aria-pressed="true">
+                    <i class="fa-solid fa-minus" aria-hidden="true"></i> Medium
+                  </button>
+                  <button type="button" class="priority-btn" data-priority="high" id="priorityHigh" aria-pressed="false">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> High
+                  </button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full" id="addTaskBtn" style="justify-content:center;">
+                <i class="fa-solid fa-plus" aria-hidden="true"></i> Add Task
+              </button>
+            </form>
+
+            <!-- Tips -->
+            <div style="background:var(--primary-xlight);border:1px solid var(--primary-light);border-radius:var(--radius-md);padding:1.25rem;margin-top:1rem;">
+              <h4 style="font-size:.9rem;font-weight:700;margin-bottom:.6rem;display:flex;align-items:center;gap:.4rem;">
+                <i class="fa-solid fa-lightbulb" style="color:var(--warning);" aria-hidden="true"></i> Study Tips
+              </h4>
+              <ul style="display:flex;flex-direction:column;gap:.4rem;">
+                <li style="font-size:.8rem;color:var(--text-secondary);display:flex;gap:.4rem;">
+                  <i class="fa-solid fa-check" style="color:var(--success);margin-top:.15rem;flex-shrink:0;" aria-hidden="true"></i>
+                  Break large assignments into smaller tasks.
+                </li>
+                <li style="font-size:.8rem;color:var(--text-secondary);display:flex;gap:.4rem;">
+                  <i class="fa-solid fa-check" style="color:var(--success);margin-top:.15rem;flex-shrink:0;" aria-hidden="true"></i>
+                  Tackle high-priority items first each session.
+                </li>
+                <li style="font-size:.8rem;color:var(--text-secondary);display:flex;gap:.4rem;">
+                  <i class="fa-solid fa-check" style="color:var(--success);margin-top:.15rem;flex-shrink:0;" aria-hidden="true"></i>
+                  Review completed tasks to build momentum.
+                </li>
+              </ul>
+            </div>
+
+          </aside>
+
+          <!-- Task panel -->
+          <div role="region" aria-label="Task list">
+            <div class="task-panel">
+              <div class="task-panel-header">
+                <h3 class="task-panel-title">
+                  <i class="fa-solid fa-list-check" aria-hidden="true"></i> My Tasks
+                </h3>
+                <div class="task-filter-tabs" role="tablist" aria-label="Filter tasks">
+                  <button class="filter-tab active" data-filter="all"       role="tab" aria-selected="true"  id="tab-all">All</button>
+                  <button class="filter-tab"         data-filter="active"   role="tab" aria-selected="false" id="tab-active">Active</button>
+                  <button class="filter-tab"         data-filter="completed" role="tab" aria-selected="false" id="tab-done">Done</button>
+                  <button class="filter-tab"         data-filter="overdue"  role="tab" aria-selected="false" id="tab-overdue">Overdue</button>
+                </div>
+              </div>
+
+              <div id="taskList" class="task-list" role="list" aria-label="Tasks" aria-live="polite">
+                <!-- Tasks rendered by JS -->
+              </div>
+
+              <div class="progress-bar-wrap" role="progressbar" aria-label="Task completion progress">
+                <span id="progressLabel" aria-live="polite">0% complete</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progressFill" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div style="margin-top:1rem;display:flex;gap:1.5rem;flex-wrap:wrap;padding:.75rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);">
+              <span style="font-size:.8rem;color:var(--text-muted);font-weight:600;">Priority:</span>
+              <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--text-secondary);">
+                <span style="width:10px;height:10px;border-radius:50%;background:var(--success);display:inline-block;" aria-hidden="true"></span> Low
+              </span>
+              <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--text-secondary);">
+                <span style="width:10px;height:10px;border-radius:50%;background:var(--warning);display:inline-block;" aria-hidden="true"></span> Medium
+              </span>
+              <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--text-secondary);">
+                <span style="width:10px;height:10px;border-radius:50%;background:var(--danger);display:inline-block;" aria-hidden="true"></span> High
+              </span>
+              <span style="margin-left:auto;font-size:.75rem;color:var(--text-muted);display:flex;align-items:center;gap:.3rem;">
+                <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Auto-saved to browser
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-icon">JMB</span>
+            <span>John M. Bahago</span>
+          </a>
+          <p>Data Science student at MIVA Open University.</p>
+          <div class="footer-social">
+            <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" title="GitHub"   aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" title="Twitter"  aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <nav class="footer-links">
+            <a href="index.html"    class="footer-link">Home</a>
+            <a href="about.html"   class="footer-link">About Me</a>
+            <a href="projects.html" class="footer-link">Projects</a>
+            <a href="planner.html"  class="footer-link">Academic Planner</a>
+            <a href="contact.html"  class="footer-link">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Info</h4>
+          <ul style="display:flex;flex-direction:column;gap:.5rem;">
+            <li style="font-size:.875rem;color:rgba(255,255,255,.5);display:flex;gap:.5rem;align-items:center;">
+              <i class="fa-solid fa-graduation-cap" style="color:var(--primary);width:16px;"></i> MIVA Open University
+            </li>
+            <li style="font-size:.875rem;color:rgba(255,255,255,.5);display:flex;gap:.5rem;align-items:center;">
+              <i class="fa-solid fa-book" style="color:var(--primary);width:16px;"></i> BSc Data Science · 100L
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 John Moses Bahago · COS 106 Term Project · MIVA Open University</p>
+        <p>Built with <i class="fa-solid fa-heart" style="color:#EF4444;"></i> using HTML, CSS &amp; JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | John Moses Bahago</title>
+  <meta name="description" content="Learn about John Moses Bahago — his educational background, career aspirations, technical skills, and hobbies." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon" aria-hidden="true">J</span>
+      </a>
+      <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="about.html"   class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="planner.html"  class="nav-link">Planner</a>
+        <a href="contact.html"  class="nav-link nav-cta">Contact Me</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:.7rem;" aria-hidden="true"></i>
+        <span>About Me</span>
+      </nav>
+      <h1 class="page-title">About Me</h1>
+      <p class="page-subtitle">A bit of background, some ambitions, and the things I care about.</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Sidebar -->
+          <aside class="about-sidebar" aria-label="Profile summary">
+            <div class="about-sidebar-card reveal">
+              <div class="sidebar-avatar" aria-hidden="true">JMB</div>
+              <h2 class="sidebar-name">John Moses Bahago</h2>
+              <p class="sidebar-role">Data Science Student</p>
+              <p class="sidebar-uni">
+                <i class="fa-solid fa-university" style="font-size:.8rem;margin-right:.3rem;" aria-hidden="true"></i>
+                MIVA Open University
+              </p>
+
+              <div class="sidebar-links" aria-label="Social links">
+                <a href="#" class="sidebar-link" title="LinkedIn" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="sidebar-link" title="GitHub" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="contact.html" class="sidebar-link" title="Email" aria-label="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+
+              <div class="sidebar-info" role="list" aria-label="Quick info">
+                <div class="sidebar-info-item" role="listitem">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  <div>
+                    <strong>Location</strong>
+                    <span style="display:block;font-size:.8rem;color:var(--text-muted)">Nigeria</span>
+                  </div>
+                </div>
+                <div class="sidebar-info-item" role="listitem">
+                  <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                  <div>
+                    <strong>Level</strong>
+                    <span style="display:block;font-size:.8rem;color:var(--text-muted)">100 Level · 2025</span>
+                  </div>
+                </div>
+                <div class="sidebar-info-item" role="listitem">
+                  <i class="fa-solid fa-flask-vial" aria-hidden="true"></i>
+                  <div>
+                    <strong>Background</strong>
+                    <span style="display:block;font-size:.8rem;color:var(--text-muted)">Petroleum Engineering</span>
+                  </div>
+                </div>
+                <div class="sidebar-info-item" role="listitem">
+                  <i class="fa-solid fa-circle" style="color:var(--success);font-size:.5rem;" aria-hidden="true"></i>
+                  <div>
+                    <strong>Status</strong>
+                    <span style="display:block;font-size:.8rem;color:var(--success)">Open to opportunities</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="contact.html" class="btn btn-primary w-full mt-3" id="contactSidebarBtn" style="justify-content:center;">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Say Hello
+              </a>
+            </div>
+          </aside>
+
+          <!-- Content -->
+          <div class="about-content">
+
+            <!-- Bio -->
+            <section aria-labelledby="bio-heading" class="reveal">
+              <div class="content-card">
+                <h2 class="content-card-title" id="bio-heading">
+                  <i class="fa-solid fa-id-card" aria-hidden="true"></i> My Story
+                </h2>
+                <p>
+                  My name is John Moses Bahago. I am a process-oriented Petroleum Engineering graduate
+                  and distance learning student with a strong passion for data validation, operational
+                  leadership, and sustainable community development.
+                </p>
+                <p>
+                  I enjoy coordinating multi-stakeholder workflows, optimizing technical processes,
+                  and driving team excellence in high-pressure environments. My goal is to leverage
+                  my analytical training and administrative competencies to solve real-world operational
+                  challenges while continuously evolving as a leader.
+                </p>
+                <p style="margin:0;">
+                  The move into Data Science isn't a departure from my engineering roots — it's
+                  an extension of them. The same mindset I applied to subsurface analysis and
+                  reservoir evaluation now drives how I approach data: with rigour, curiosity,
+                  and a genuine desire to find the signal in the noise.
+                </p>
+              </div>
+            </section>
+
+            <!-- Education Table -->
+            <section aria-labelledby="edu-heading" class="reveal">
+              <div class="content-card">
+                <h2 class="content-card-title" id="edu-heading">
+                  <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Educational Background
+                </h2>
+                <div style="overflow-x:auto;">
+                  <table class="edu-table" aria-label="Education history">
+                    <caption style="text-align:left;font-size:.8rem;color:var(--text-muted);margin-bottom:.75rem;caption-side:top;">
+                      Academic qualifications in chronological order
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Institution</th>
+                        <th scope="col">Qualification</th>
+                        <th scope="col">Field</th>
+                        <th scope="col">Period</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>MIVA Open University</td>
+                        <td>BSc</td>
+                        <td>Data Science</td>
+                        <td>2025 – Present</td>
+                        <td><span class="current-badge">In Progress</span></td>
+                      </tr>
+                      <tr>
+                        <td>Previous University</td>
+                        <td>BEng</td>
+                        <td>Petroleum Engineering</td>
+                        <td>2016 – 2022</td>
+                        <td><span style="color:var(--success);font-weight:600;font-size:.8rem;">Completed</span></td>
+                      </tr>
+                      <tr>
+                        <td>Secondary School</td>
+                        <td>WAEC / SSCE</td>
+                        <td>Science</td>
+                        <td>2010 – 2016</td>
+                        <td><span style="color:var(--success);font-weight:600;font-size:.8rem;">Completed</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+
+            <!-- Career Aspirations -->
+            <section aria-labelledby="aspirations-heading" class="reveal">
+              <div class="content-card">
+                <h2 class="content-card-title" id="aspirations-heading">
+                  <i class="fa-solid fa-rocket" aria-hidden="true"></i> Career Aspirations
+                </h2>
+                <p>
+                  My long-term goal is to operate at the intersection of <strong>data science</strong>
+                  and <strong>energy sector operations</strong> — a space that's still largely under-explored
+                  in the African context. I want to build tools and frameworks that help energy companies
+                  make smarter decisions, faster, using real-time data analytics and predictive modelling.
+                </p>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-top:1rem;">
+                  <li style="display:flex;gap:.75rem;align-items:flex-start;">
+                    <i class="fa-solid fa-circle-check" style="color:var(--primary);margin-top:.15rem;flex-shrink:0;" aria-hidden="true"></i>
+                    <span style="color:var(--text-secondary);">Become a certified Data Scientist with a focus on energy analytics</span>
+                  </li>
+                  <li style="display:flex;gap:.75rem;align-items:flex-start;">
+                    <i class="fa-solid fa-circle-check" style="color:var(--primary);margin-top:.15rem;flex-shrink:0;" aria-hidden="true"></i>
+                    <span style="color:var(--text-secondary);">Build AI-assisted tools for reservoir management and production forecasting</span>
+                  </li>
+                  <li style="display:flex;gap:.75rem;align-items:flex-start;">
+                    <i class="fa-solid fa-circle-check" style="color:var(--primary);margin-top:.15rem;flex-shrink:0;" aria-hidden="true"></i>
+                    <span style="color:var(--text-secondary);">Lead cross-functional teams in operational excellence initiatives</span>
+                  </li>
+                  <li style="display:flex;gap:.75rem;align-items:flex-start;">
+                    <i class="fa-solid fa-circle-check" style="color:var(--primary);margin-top:.15rem;flex-shrink:0;" aria-hidden="true"></i>
+                    <span style="color:var(--text-secondary);">Contribute to community-driven data literacy programmes in Nigeria</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section aria-labelledby="skills-heading" class="reveal">
+              <div class="content-card">
+                <h2 class="content-card-title" id="skills-heading">
+                  <i class="fa-solid fa-wrench" aria-hidden="true"></i> Technical &amp; Professional Skills
+                </h2>
+                <div class="skills-grid">
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span>Subsurface Formation Evaluation</span>
+                      <span class="skill-pct">90%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span>Wellbore Trajectory &amp; Production</span>
+                      <span class="skill-pct">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span>Advanced Data Computation</span>
+                      <span class="skill-pct">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span>Logistics &amp; Supply Chain</span>
+                      <span class="skill-pct">78%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span>Strategic Team Leadership</span>
+                      <span class="skill-pct">88%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span>Public Speaking &amp; Reporting</span>
+                      <span class="skill-pct">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span>Microsoft Office Suite</span>
+                      <span class="skill-pct">92%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span>HR &amp; Relationship Management</span>
+                      <span class="skill-pct">82%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-pct="82"></div></div>
+                  </div>
+                </div>
+
+                <hr class="divider" />
+
+                <h3 style="font-size:.95rem;font-weight:700;margin-bottom:.9rem;color:var(--text-primary);">
+                  Tools &amp; Technologies
+                </h3>
+                <div class="tag-cloud" role="list" aria-label="Tools and technologies">
+                  <span class="tag" role="listitem"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+                  <span class="tag" role="listitem"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Excel (Advanced)</span>
+                  <span class="tag" role="listitem"><i class="fa-solid fa-database" aria-hidden="true"></i> SQL (Learning)</span>
+                  <span class="tag" role="listitem"><i class="fa-brands fa-microsoft" aria-hidden="true"></i> Power BI</span>
+                  <span class="tag" role="listitem"><i class="fa-solid fa-code" aria-hidden="true"></i> HTML &amp; CSS</span>
+                  <span class="tag" role="listitem"><i class="fa-solid fa-file-word" aria-hidden="true"></i> MS Word</span>
+                  <span class="tag" role="listitem"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i> PowerPoint</span>
+                  <span class="tag" role="listitem"><i class="fa-solid fa-oil-well" aria-hidden="true"></i> Petrel (Basic)</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- Hobbies -->
+            <section aria-labelledby="hobbies-heading" class="reveal">
+              <div class="content-card">
+                <h2 class="content-card-title" id="hobbies-heading">
+                  <i class="fa-solid fa-heart" aria-hidden="true"></i> Hobbies &amp; Interests
+                </h2>
+                <div class="hobby-grid">
+                  <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+                    <h4>Reading</h4>
+                    <p>Mostly non-fiction — leadership, geopolitics, and energy policy.</p>
+                  </div>
+                  <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+                    <h4>Community Service</h4>
+                    <p>Volunteering and driving grassroots development projects.</p>
+                  </div>
+                  <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i></div>
+                    <h4>Public Speaking</h4>
+                    <p>Facilitating workshops and representing groups in formal settings.</p>
+                  </div>
+                  <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fa-solid fa-chess" aria-hidden="true"></i></div>
+                    <h4>Strategic Thinking</h4>
+                    <p>Chess, puzzles, and scenario planning — anything that exercises the mind.</p>
+                  </div>
+                  <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+                    <h4>Tech &amp; Data</h4>
+                    <p>Exploring data tools, following AI developments, building small projects.</p>
+                  </div>
+                  <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fa-solid fa-person-hiking" aria-hidden="true"></i></div>
+                    <h4>Nature &amp; Travel</h4>
+                    <p>Getting out of the screen and into the world when time allows.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Featured Video -->
+            <section aria-labelledby="video-heading" class="reveal">
+              <div class="content-card">
+                <h2 class="content-card-title" id="video-heading">
+                  <i class="fa-solid fa-play" aria-hidden="true"></i> Recommended Watch
+                </h2>
+                <p style="margin-bottom:1.25rem;">
+                  This TED Talk by Hans Rosling on data and the developing world captures
+                  exactly the kind of thinking that pulled me towards data science. If you haven't
+                  seen it, it's worth the 20 minutes.
+                </p>
+                <div class="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/hVimVzgtD6w"
+                    title="The best stats you've ever seen | Hans Rosling | TED"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+                  </iframe>
+                </div>
+                <p style="font-size:.8rem;color:var(--text-muted);margin-top:.75rem;margin-bottom:0;">
+                  <i class="fa-brands fa-youtube" style="color:#FF0000;" aria-hidden="true"></i>
+                  "The best stats you've ever seen" — Hans Rosling, TED (2006)
+                </p>
+              </div>
+            </section>
+
+          </div><!-- end about-content -->
+        </div><!-- end about-grid -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-icon">JMB</span>
+            <span>John M. Bahago</span>
+          </a>
+          <p>Data Science student at MIVA Open University.
+             Building analytical bridges between engineering and data.</p>
+          <div class="footer-social">
+            <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" title="GitHub"   aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" title="Twitter"  aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <nav class="footer-links">
+            <a href="index.html"    class="footer-link">Home</a>
+            <a href="about.html"   class="footer-link">About Me</a>
+            <a href="projects.html" class="footer-link">Projects</a>
+            <a href="planner.html"  class="footer-link">Academic Planner</a>
+            <a href="contact.html"  class="footer-link">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Info</h4>
+          <ul style="display:flex;flex-direction:column;gap:.5rem;">
+            <li style="font-size:.875rem;color:rgba(255,255,255,.5);display:flex;gap:.5rem;align-items:center;">
+              <i class="fa-solid fa-graduation-cap" style="color:var(--primary);width:16px;"></i> MIVA Open University
+            </li>
+            <li style="font-size:.875rem;color:rgba(255,255,255,.5);display:flex;gap:.5rem;align-items:center;">
+              <i class="fa-solid fa-book" style="color:var(--primary);width:16px;"></i> BSc Data Science · 100L
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 John Moses Bahago · COS 106 Term Project · MIVA Open University</p>
+        <p>Designed &amp; built with <i class="fa-solid fa-heart" style="color:#EF4444;"></i> using HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
